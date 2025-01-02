@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        iframe{
+            width: 400px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <!--
+    sandbox="sandbox" - não deixa o seu usuario enviar dados através do iframe
+    referrerpolicy="no-referrer" - não deixa o iframe pegar nenhum dado do usuario
+    -->
+    <h1>My site</h1>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid, laborum doloribus. Odit laudantium accusantium eos nam quasi ut aspernatur pariatur ipsa deleniti. Deserunt consequatur repellendus quisquam enim numquam aut porro?</p>
+    <iframe src="pagfrom.html" sandbox="sandbox" referrerpolicy="no-referrer">
+        <p>Seu navegador não é compatível</p>
+    </iframe>
+</body>
+</html>
