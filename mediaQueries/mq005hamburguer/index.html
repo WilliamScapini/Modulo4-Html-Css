@@ -13,11 +13,11 @@
         <h1>Notícias</h1>
         <menu>
             <div id="ham">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span id="sp1" class="init"></span>
+                <span id="sp2" class="init"></span>
+                <span id="sp3" class="init"></span>
             </div>
-            <ul id="lista">
+            <ul id="lista" class="inicial">
                 <li>Esportes</li>
                 <li>Politica</li>
                 <li>Tech</li>
@@ -37,12 +37,39 @@
     <script>
         let ham = document.getElementById("ham")
         let lista = document.getElementById("lista")
+        let sp1 = document.getElementById('sp1')
+        let sp2 = document.getElementById("sp2")
+        let sp3 = document.getElementById('sp3')
+
         ham.addEventListener("click", function(e){
-            if(lista.classList.contains("aberto")){
-                lista.classList.remove("aberto")
-            }else{
+            if(lista.classList.contains("inicial")){
+                lista.classList.remove("inicial")
                 lista.classList.add("aberto")
-            }
+                sp1.classList.remove("init")
+                sp2.classList.remove("init")
+                sp3.classList.remove("init")
+                sp1.classList.add("fechar")
+                sp2.classList.add("fechar")
+                sp3.classList.add("fechar")
+            }else if(lista.classList.contains("aberto")){
+                lista.classList.remove("aberto")
+                lista.classList.add('fechado')
+                sp1.classList.remove("fechar")
+                sp2.classList.remove("fechar")
+                sp3.classList.remove("abrir")
+                sp1.classList.add("abrir")
+                sp2.classList.add("abrir")
+                sp3.classList.add("abrir")
+        }else{
+            lista.classList.remove("fechado")
+            lista.classList.add("aberto")
+            sp1.classList.add("fechar")
+            sp2.classList.add("fechar")
+            sp3.classList.add("fechar")
+            sp1.classList.remove("abrir")
+            sp2.classList.remove("abrir")
+            sp3.classList.remove("abrir")
+        }
         })
     </script>
 </body>

@@ -26,6 +26,36 @@ header h1 {
     align-items: center;
     background-color: white;
     padding: 10px;
+    border-radius: 5px;
+}
+
+.fechar:nth-child(1){
+    transform: rotate(45deg) translate(6px,7px);
+    transition: transform 400ms ease-in-out 50ms;
+}
+
+.fechar:nth-child(2){
+    transform: rotate(-45deg) translate(0px,-2px);
+    transition: transform 400ms ease-in-out 50ms;
+
+}
+
+.fechar:nth-child(3){
+    background-color: white;
+    transition: background-color 400ms ease-in-out ;
+}
+.abrir:nth-child(3){
+    background-color: black;
+    transition: background-color 400ms ease-in-out 250ms;
+}
+.abrir:nth-child(2){
+    transform: rotate(0deg) translate(0px,0px);
+    transition: transform 400ms ease-in-out 50ms;
+}
+
+.abrir:nth-child(1){
+    transform: rotate(0deg) translate(0px,0px);
+    transition: transform 400ms ease-in-out 50ms;
 }
 span{
     height: 5px;
@@ -36,17 +66,31 @@ span{
 }
 
 menu ul{
-    display: none;  
+    height: 0px;  
     background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.inicial > li {
+    height: 0px;
+    opacity: 0;
 }
 
 .aberto{
-    display: block;
-    text-align: center;
-    padding: 5px;
+    height: 130px;
+    padding: 10px;
+    border-radius: 0px 0px 5px 5px;
+    margin-top: -2px;
+    transition: height 300ms;
 }
 
-.aberto li {
+
+.aberto > li{
+    height: 40px;
+    opacity: 1;
+    text-align: center;
+    padding: 5px;
     padding: 5px;
     border: 1px solid black;
     border-radius: 5px;
@@ -54,8 +98,20 @@ menu ul{
     background-color: darkcyan;
     color: white;
     font-size: 1em;
+    transition: height 300ms ease-in-out,opacity 300ms ;
 }
 
+.fechado{
+    height: 0px;
+    transition: height 300ms ease-in-out 100ms;
+
+}
+
+.fechado > li{
+    opacity: 0;
+    height: 0px;
+    transition: height 300ms ease-in-out 100ms;
+}
 
 main{
     max-width: 700px;
