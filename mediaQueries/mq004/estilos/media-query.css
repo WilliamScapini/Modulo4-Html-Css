@@ -1,0 +1,56 @@
+@charset "UTF-8";
+
+@media screen /*and (orientation: portrait) */and (min-width: 600px) and (max-width: 992px){
+    body{
+        background-image: url(../../imagens/back-tablet.jpg);
+    }
+    #imgtb{
+      display: block;
+    }
+    #imgph{
+        display: none;
+    }
+  }
+
+@media screen /*and (orientation: portrait) */and (min-width: 992px) and (max-width: 1400px){
+    body{
+        background-image: url(../../imagens/back-pc.jpg);
+    }
+    #imgpc{
+        display: block;
+      }
+      #imgph{
+          display: none;
+      }
+}
+
+@media screen /*and (orientation: landscape) */and (min-width: 1400px){
+    body{
+        background-image: url(../../imagens/back-tv.jpg);
+    }
+    #imgtv{
+        display: block;
+      }
+      #imgph{
+          display: none;
+      }
+}
+
+@media print {
+    *{
+        font-family: 'Courier New', Courier, monospace;
+    }
+    body{
+        color: black;
+        text-shadow: none;
+    }
+    main{
+        border: 2px solid black;
+    }
+    #imgpr{
+        display: block;
+      }
+      #imgph{
+          display: none;
+      }
+}

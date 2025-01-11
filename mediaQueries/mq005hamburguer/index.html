@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query</title>
+    <link rel="stylesheet" href="estilos/tela.css" media="screen and (min-width: 600px)">
+    <link rel="stylesheet" href="estilos/impressora.css" media="print">
+    <link rel="stylesheet" href="estilos/style.css">
+</head>
+<body>
+    <header>
+        <h1>Notícias</h1>
+        <menu>
+            <div id="ham">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul id="lista">
+                <li>Esportes</li>
+                <li>Politica</li>
+                <li>Tech</li>
+            </ul>
+        </menu>
+    </header>
+    <main>
+        <article>
+            <h2>Estou aprendendo media queries</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non sint nisi recusandae dignissimos veritatis? Tempora reprehenderit, modi dicta quod nobis quibusdam. Non excepturi vitae at consequatur ex. Illum, repudiandae temporibus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsam nulla vel quidem dolorum, magni, quaerat hic eligendi similique ratione aut nostrum quae? Expedita saepe minima atque mollitia quisquam odio.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non sint nisi recusandae dignissimos veritatis? Tempora reprehenderit, modi dicta quod nobis quibusdam. Non excepturi vitae at consequatur ex. Illum, repudiandae temporibus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsam nulla vel quidem dolorum, magni, quaerat hic eligendi similique ratione aut nostrum quae? Expedita saepe minima atque mollitia quisquam odio.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non sint nisi recusandae dignissimos veritatis? Tempora reprehenderit, modi dicta quod nobis quibusdam. Non excepturi vitae at consequatur ex. Illum, repudiandae temporibus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsam nulla vel quidem dolorum, magni, quaerat hic eligendi similique ratione aut nostrum quae? Expedita saepe minima atque mollitia quisquam odio.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non sint nisi recusandae dignissimos veritatis? Tempora reprehenderit, modi dicta quod nobis quibusdam. Non excepturi vitae at consequatur ex. Illum, repudiandae temporibus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsam nulla vel quidem dolorum, magni, quaerat hic eligendi similique ratione aut nostrum quae? Expedita saepe minima atque mollitia quisquam odio.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non sint nisi recusandae dignissimos veritatis? Tempora reprehenderit, modi dicta quod nobis quibusdam. Non excepturi vitae at consequatur ex. Illum, repudiandae temporibus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsam nulla vel quidem dolorum, magni, quaerat hic eligendi similique ratione aut nostrum quae? Expedita saepe minima atque mollitia quisquam odio.</p>
+        </article>
+    </main>
+    <script>
+        let ham = document.getElementById("ham")
+        let lista = document.getElementById("lista")
+        ham.addEventListener("click", function(e){
+            if(lista.classList.contains("aberto")){
+                lista.classList.remove("aberto")
+            }else{
+                lista.classList.add("aberto")
+            }
+        })
+    </script>
+</body>
+</html>
